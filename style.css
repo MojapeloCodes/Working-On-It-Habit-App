@@ -1,0 +1,124 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Layout */
+body {
+  display: flex;
+  height: 100vh;
+}
+
+/* Side Panel */
+.side-panel {
+  width: 240px;
+  background-color: #1e1e2f;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.side-panel h3 {
+  border-bottom: 1px solid #444;
+  padding-bottom: 5px;
+}
+
+.side-panel ul {
+  list-style: none;
+}
+
+.side-panel a {
+  color: #a5c9ff;
+  text-decoration: none;
+  display: block;
+  padding: 6px 0;
+}
+
+.side-panel a:hover {
+  color: #ffd700;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 30px;
+  background-color: #f0f0f5;
+  overflow-y: auto;
+}
+
+/* Inputs */
+input, textarea, select, button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* Buttons */
+button {
+  background: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #555;
+}
+
+/* Timer */
+#timer {
+  font-size: 2em;
+  text-align: center;
+  color: #ff6600;
+}
+
+/* Calendar */
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.day {
+  background: white;
+  min-height: 90px;
+  padding: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+}
+
+.day span {
+  font-weight: bold;
+  font-size: 0.8em;
+}
+
+.activity-block {
+  margin-top: 4px;
+  padding: 3px;
+  font-size: 0.75em;
+  color: white;
+  border-radius: 4px;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  width: 300px;
+  border-radius: 8px;
+}

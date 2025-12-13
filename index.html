@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Habit App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1e1e2f">
+
+</head>
+<body>
+
+<!-- Side Panel -->
+<div class="side-panel">
+  <h3>Menu</h3>
+  <ul>
+    <li><a href="#" onclick="showMainView('dashboard')">Dashboard</a></li>
+    <li><a href="#" onclick="showMainView('working')">What Are You Working On</a></li>
+    <li><a href="#" onclick="showMainView('activity')">Activity</a></li>
+    <li><a href="#" onclick="showMainView('biggerPicture')">The Bigger Picture</a></li>
+    <li><a href="#" onclick="showMainView('analysis')">Analysis</a></li>
+  </ul>
+</div>
+
+<!-- Main Content -->
+<div class="main-content" id="mainContent"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
