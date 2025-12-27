@@ -1,18 +1,19 @@
 {
-  "name": "My Habit App",
+  "name": "Habit Tracker",
   "short_name": "Habits",
-  "start_url": "index.html",
+  "start_url": "/",
   "display": "standalone",
-  "background_color": "#1e1e2f",
-  "theme_color": "#1e1e2f",
+  "background_color": "#111111",
+  "theme_color": "#4CAF50",
+  "description": "Track your daily habits and export them to CSV. Works offline!",
   "icons": [
     {
-      "src": "icon-192.png",
+      "src": "icons/icon-192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "icon-512.png",
+      "src": "icons/icon-512.png",
       "sizes": "512x512",
       "type": "image/png"
     }

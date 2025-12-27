@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkingOnIt - Track Your Time</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Ambient Background -->
+    <div id="ambient-bg" class="ambient-background"></div>
+    
+    <!-- App Container -->
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="logo">WorkingOnIt ⏱️</div>
+            <div class="header-info">
+                <div id="current-time" class="time-display">--:--</div>
+                <div id="greeting" class="greeting">Welcome</div>
+            </div>
+            <button id="logout-btn" class="btn-logout">Logout</button>
+        </header>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Timer Section -->
+            <section class="timer-section">
+                <div class="timer-card">
+                    <h2>Track Your Time</h2>
+                    
+                    <!-- Activity Selector -->
+                    <div class="activity-selector">
+                        <select id="activity-select" class="activity-dropdown">
+                            <option value="">Select an activity...</option>
+                        </select>
+                        <button id="create-activity-btn" class="btn-icon" title="Create new activity">+</button>
+                    </div>
+                    
+                    <!-- Start Timer Button -->
+                    <button id="start-timer-btn" class="btn-primary btn-start hidden">Start Timer</button>
+                    
+                    <!-- Timer Display (shown when active) -->
+                    <div id="timer-display" class="timer-display hidden">
+                        <div class="timer-info">
+                            <div id="current-activity-name" class="activity-name">Activity Name</div>
+                            <div id="current-activity-sphere" class="activity-sphere">Sphere</div>
+                        </div>
+                        <div id="timer-clock" class="timer-clock">00:00:00</div>
+                        <button id="stop-timer-btn" class="btn-primary btn-stop">Stop Timer</button>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Today's Activities -->
+            <section class="activities-section">
+                <h3>Today's Activities</h3>
+                <div id="today-activities" class="activity-list">
+                    <p class="empty-state">No activities tracked yet today. Start tracking!</p>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <!-- Create Activity Modal -->
+    <div id="activity-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Create Activity</h2>
+                <button id="close-modal" class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Activity Name</label>
+                    <input type="text" id="activity-name-input" placeholder="e.g., Morning workout, Reading, Work project...">
+                </div>
+                
+                <div id="sphere-suggestions" class="sphere-suggestions"></div>
+                
+                <div class="form-group">
+                    <label>Life Sphere</label>
+                    <select id="sphere-select" class="activity-dropdown">
+                        <option value="">Select a sphere...</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Color</label>
+                    <div id="color-picker" class="color-picker"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="save-activity-btn" class="btn-primary btn-start">Save Activity</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Rate Activity Modal -->
+    <div id="rate-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>How are you feeling?</h2>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Rate your experience</label>
+                    <div class="feeling-scale">
+                        <button class="feeling-btn" data-rating="1">
+                            😞
+                            <span>Poor</span>
+                        </button>
+                        <button class="feeling-btn" data-rating="2">
+                            😕
+                            <span>Fair</span>
+                        </button>
+                        <button class="feeling-btn" data-rating="3">
+                            😐
+                            <span>Okay</span>
+                        </button>
+                        <button class="feeling-btn" data-rating="4">
+                            🙂
+                            <span>Good</span>
+                        </button>
+                        <button class="feeling-btn" data-rating="5">
+                            😊
+                            <span>Great</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Notes (optional)</label>
+                    <textarea id="activity-note" maxlength="500" placeholder="How did this activity go? Any thoughts?"></textarea>
+                    <span class="char-count"><span id="note-count">0</span>/500</span>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="save-rating-btn" class="btn-primary btn-start">Save</button>
+            </div>
+        </div>
+    </div>
+    
+    <script type="module" src="app.js"></script>
+</body>
+</html>
